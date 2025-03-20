@@ -6,7 +6,7 @@ Superstore businesses needs to optimize sales performance, Identify high-value c
 - Which product categories and subcategories are the most profitable ?
 - How do sales and profit vary across different region and customer segment ?
 - Are there any seasonal trend affecting sales performance ?
-- Identify tge average total sales per order
+- What is the average total sales per order?
 - How many order is received.
 ## Skills Demonstration
 During the analysis process, a diverse set of skills was demonstrated, including descriptive analysis of the dataset, SQL-based summarization, data transformation techniques, and exploratory statistical analysis to uncover business insight
@@ -34,5 +34,42 @@ The full project can be seen [Here](https://github.com/kolex24/sql-superstore-an
  ORDER BY SUM(Profit) DESC;
  ```
 
-Technolgy has the highest profit generated (55617.82) in the Product category while Copiers has the highest profit generated in product sub-category
+Technolgy has the highest profit generated in the Product category while Copiers has the highest profit generated in product sub-category
 
+```
+ SELECT REGION, segment, ROUND(SUM(SALES), 2) [TOTAL REVENUE ] FROM Superstore
+ GROUP BY Region, Segment
+ ORDER BY SUM(SALES) DESC;
+```
+
+Higher Sales are generated in the west region, also the consumer generated the highest sales in the customer segment while lower salest are generated in the south region and homw office customer segment.
+
+```
+SELECT REGION, segment, ROUND(SUM(PROFIT), 2) [TOTAL PROFIT] FROM Superstore
+ GROUP BY Region, segment
+ ORDER BY SUM(PROFIT) DESC;
+```
+
+Higher profit are generated in the west region, also the consumer generated the highest profit in the customer segment while lower salest are generated in the south region and homw office customer segment.
+
+```
+SELECT YEAR(Order_Date) [Year], DATEPART(QUARTER, Order_Date) [Quarter], SUM(SALES) [Total Sales] FROM Superstore
+GROUP BY YEAR(Order_Date), DATEPART(QUARTER, Order_Date)
+ORDER BY YEAR, Quarter;
+```
+
+There is a consistent trend in the sales across all the years whetre sales tend to increase in 4th quarter of the year across all year while there is a lower sales in 1st quarter of the year across all years
+
+```
+ SELECT ROUND(AVG(TOTAL_ORDER_SALES), 2) [AVERAGE SALES] FROM 
+ (SELECT Order_ID, SUM(SALES) [TOTAL_ORDER_SALES] FROM SUPERSTORE 
+ GROUP BY Order_ID) AS ORDER_SALES;
+```
+
+the  average sales per order (458.61)
+
+```
+SELECT COUNT(Order_ID) Orders FROM SUPERSTORE;
+```
+
+Total order superstore receieved (9994)

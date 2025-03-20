@@ -14,11 +14,5 @@ During the analysis process, a diverse set of skills was demonstrated, including
  To ensure data reliability and data integrity of the dataset the following steps are taken
  - Data loading and inspection
  - Removing duplicate
- - Handling null values
-   Null value is found in the profit column
-
-    Before
-    
-   After
-   ``` UPDATE SUPERSTORE SET Profit = 28.7017933364272
-WHERE Profit IS NULL; ```
+ - Handling null values Null value is found in the profit column
+```SELECT Profit FROM Superstore WHERE Profit IS NULL;```

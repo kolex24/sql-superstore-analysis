@@ -24,7 +24,8 @@ During the analysis process, a diverse set of skills was demonstrated, including
 The full project can be seen [Here](https://github.com/kolex24/sql-superstore-analysis/blob/main/SQLQuery_SUPERSTORE.sql)
 
 ## Analysis Summary
-```  SELECT Category, Sub_Category, SUM(SALES) [Total Revenue] FROM Superstore
+```
+SELECT Category, Sub_Category, SUM(SALES) [Total Revenue] FROM Superstore
  GROUP BY Category, Sub_Category
  HAVING Sub_Category IN ( 'BINDERS', 'ART', 'PHONES', 'BOOKCASES')
  ORDER BY SUM(SALES) DESC; ```

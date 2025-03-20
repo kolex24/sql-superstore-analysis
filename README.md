@@ -17,10 +17,12 @@ During the analysis process, a diverse set of skills was demonstrated, including
  - Handling null values Null value is found in the profit column
 
 ``` 
-SELECT Profit FROM Superstore WHERE Profit IS NUll```
+SELECT Profit FROM Superstore WHERE Profit IS NUll
+```
 
 ```
-UPDATE SUPERSTORE SET Profit = 28.7017933364272 WHERE Profit IS NULL; ```
+UPDATE SUPERSTORE SET Profit = 28.7017933364272 WHERE Profit IS NULL;
+ ```
 
 
 The full project can be seen [Here](https://github.com/kolex24/sql-superstore-analysis/blob/main/SQLQuery_SUPERSTORE.sql)
@@ -29,7 +31,8 @@ The full project can be seen [Here](https://github.com/kolex24/sql-superstore-an
 ```
  SELECT SUB_CATEGORY,Category, SUM(Profit) [Total Profit] FROM Superstore
  GROUP BY Sub_Category, Category
- ORDER BY SUM(Profit) DESC; ```
+ ORDER BY SUM(Profit) DESC;
+ ```
 
 Technolgy has the highest profit generated (55617.82) in the Product category while Copiers has the highest profit generated in product sub-category
 

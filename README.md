@@ -19,3 +19,7 @@ During the analysis process, a diverse set of skills was demonstrated, including
 ``` SELECT Profit FROM Superstore WHERE Profit IS NUll```
 
 ```UPDATE SUPERSTORE SET Profit = 28.7017933364272 WHERE Profit IS NULL; ```
+
+
+The full project can be seen [Here](https://github.com/kolex24/sql-superstore-analysis/blob/main/SQLQuery_SUPERSTORE.sql)
+

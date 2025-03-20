@@ -16,5 +16,5 @@ During the analysis process, a diverse set of skills was demonstrated, including
  - Removing duplicate
  - Handling null values Null value is found in the profit column
 ```SELECT Profit FROM Superstore WHERE Profit IS NULL;```
-```UPDATE SUPERSTORE SET Profit = 28.7017933364272
-WHERE Profit IS NULL; ```
+
+```UPDATE SUPERSTORE SET Profit = 28.7017933364272 WHERE Profit IS NULL; ```

@@ -10,7 +10,7 @@ Superstore businesses needs to optimize sales performance, Identify high-value c
 - How many order is received.
 ## Skills Demonstration
 During the analysis process, a diverse set of skills was demonstrated, including descriptive analysis of the dataset, SQL-based summarization, data transformation techniques, and exploratory statistical analysis to uncover business insight
- ### Data Tansformation & Data Cleaning
+ ## Data Tansformation & Data Cleaning
  To ensure data reliability and data integrity of the dataset the following steps are taken
  - Data loading and inspection
  - Removing duplicate
@@ -22,4 +22,10 @@ During the analysis process, a diverse set of skills was demonstrated, including
 
 
 The full project can be seen [Here](https://github.com/kolex24/sql-superstore-analysis/blob/main/SQLQuery_SUPERSTORE.sql)
+
+## Analysis Summary
+```  SELECT Category, Sub_Category, SUM(SALES) [Total Revenue] FROM Superstore
+ GROUP BY Category, Sub_Category
+ HAVING Sub_Category IN ( 'BINDERS', 'ART', 'PHONES', 'BOOKCASES')
+ ORDER BY SUM(SALES) DESC; ```
 

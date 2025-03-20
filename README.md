@@ -10,4 +10,15 @@ Superstore businesses needs to optimize sales performance, Identify high-value c
 - How many order is received.
 ## Skills Demonstration
 During the analysis process, a diverse set of skills was demonstrated, including descriptive analysis of the dataset, SQL-based summarization, data transformation techniques, and exploratory statistical analysis to uncover business insight
- 
+ ## Data Tansformation & Data Cleaning
+ To ensure data reliability and data integrity of the dataset the following steps are taken
+ - Data loading and inspection
+ - Removing duplicate
+ - Handling null values
+   Null value is found in the profit column
+   Before
+    ''' SELECT Profit FROM Superstore
+       WHERE Profit IS NULL; ''''
+   After
+  ''' UPDATE SUPERSTORE SET Profit = 28.7017933364272
+   WHERE Profit IS NULL;'''
